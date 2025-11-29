@@ -1,0 +1,51 @@
+{
+  "id": "mcp-server-notion",
+  "packageName": "notion-mcp-server",
+  "name": "Notion",
+  "description": "All-in-one workspace for notes, docs, and project management.",
+  "longDescription": "The Notion MCP Server provides AI applications with access to your Notion workspace, enabling reading and writing of pages, databases, and blocks.\n\n## Features\n- Read and create pages\n- Query databases\n- Update blocks and content\n- Search across workspace",
+  "author": {
+    "name": "Notion",
+    "url": "https://notion.so",
+    "verified": true
+  },
+  "version": "1.0.0",
+  "versions": [
+    { "version": "1.0.0", "releaseDate": "2024-11-15", "minProtocolVersion": "2024-11-05" }
+  ],
+  "category": "productivity",
+  "tags": ["notion", "notes", "productivity", "workspace", "documentation"],
+  "repositoryUrl": "https://github.com/makenotion/notion-mcp-server",
+  "homepageUrl": "https://notion.so",
+  "license": "MIT",
+  "installSource": "url",
+  "installCommand": "https://mcp.notion.com/mcp",
+  "transportType": "streamable-http",
+  "permissions": [
+    { "type": "read", "scope": "notion-workspace", "description": "Read workspace data", "required": true },
+    { "type": "write", "scope": "notion-pages", "description": "Create and modify pages", "required": false }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": true },
+    "resources": { "listChanged": true }
+  },
+  "tools": [
+    { "name": "search", "description": "Search Notion workspace", "isReadOnly": true },
+    { "name": "get_page", "description": "Get page content", "isReadOnly": true },
+    { "name": "create_page", "description": "Create a new page" },
+    { "name": "update_page", "description": "Update page content" }
+  ],
+  "resources": [],
+  "prompts": [],
+  "requiredEnvVars": [],
+  "optionalEnvVars": [],
+  "minProtocolVersion": "2024-11-05",
+  "downloads": 75000,
+  "rating": 4.6,
+  "ratingCount": 198,
+  "reviews": [],
+  "lastUpdated": "2024-11-15T10:00:00Z",
+  "createdAt": "2024-10-01T00:00:00Z",
+  "isVerified": true,
+  "isFeatured": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "mcp-server-github",
+  "packageName": "github-mcp-server",
+  "name": "GitHub",
+  "description": "Version control and collaborative development platform. Access repositories, issues, pull requests, and more.",
+  "longDescription": "The GitHub MCP Server enables AI applications to interact with GitHub's API, providing access to repositories, issues, pull requests, and other GitHub features.\n\n## Features\n- Browse and search repositories\n- Read and create issues\n- Review and comment on pull requests\n- Access file contents from repositories\n- Manage branches and commits",
+  "author": {
+    "name": "GitHub",
+    "url": "https://github.com",
+    "verified": true
+  },
+  "version": "1.0.0",
+  "versions": [
+    { "version": "1.0.0", "releaseDate": "2024-11-15", "minProtocolVersion": "2024-11-05" }
+  ],
+  "category": "version-control",
+  "tags": ["github", "git", "version-control", "api", "repositories"],
+  "repositoryUrl": "https://github.com/github/github-mcp-server",
+  "license": "MIT",
+  "installSource": "docker",
+  "installCommand": "ghcr.io/github/github-mcp-server",
+  "transportType": "stdio",
+  "permissions": [
+    { "type": "read", "scope": "github-repos", "description": "Read repository data", "required": true },
+    { "type": "write", "scope": "github-issues", "description": "Create and modify issues", "required": false }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": true },
+    "resources": { "listChanged": true }
+  },
+  "tools": [
+    { "name": "search_repositories", "description": "Search GitHub repositories", "isReadOnly": true },
+    { "name": "get_file_contents", "description": "Get file contents from a repository", "isReadOnly": true },
+    { "name": "create_issue", "description": "Create a new issue" },
+    { "name": "list_issues", "description": "List issues in a repository", "isReadOnly": true },
+    { "name": "create_pull_request", "description": "Create a pull request" }
+  ],
+  "resources": [],
+  "prompts": [],
+  "requiredEnvVars": [
+    { "name": "GITHUB_PERSONAL_ACCESS_TOKEN", "description": "GitHub Personal Access Token", "isSecret": true, "example": "ghp_xxxxxxxxxxxx" }
+  ],
+  "optionalEnvVars": [],
+  "minProtocolVersion": "2024-11-05",
+  "downloads": 89000,
+  "rating": 4.7,
+  "ratingCount": 256,
+  "reviews": [],
+  "lastUpdated": "2024-11-15T10:00:00Z",
+  "createdAt": "2024-10-01T00:00:00Z",
+  "isVerified": true,
+  "isFeatured": true
+}

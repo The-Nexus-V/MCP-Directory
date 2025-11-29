@@ -1,0 +1,52 @@
+{
+  "id": "mcp-server-playwright",
+  "packageName": "playwright-mcp-server",
+  "name": "Playwright",
+  "description": "Browser automation and testing framework for web applications.",
+  "longDescription": "The Playwright MCP Server enables AI applications to automate browser interactions for testing and web scraping.\n\n## Features\n- Navigate web pages\n- Take screenshots\n- Click elements and fill forms\n- Execute JavaScript in page context\n- Support for multiple browsers",
+  "author": {
+    "name": "Microsoft",
+    "url": "https://playwright.dev",
+    "verified": true
+  },
+  "version": "1.0.0",
+  "versions": [
+    { "version": "1.0.0", "releaseDate": "2024-11-15", "minProtocolVersion": "2024-11-05" }
+  ],
+  "category": "testing",
+  "tags": ["playwright", "browser", "automation", "testing", "e2e"],
+  "repositoryUrl": "https://github.com/anthropics/playwright-mcp-server",
+  "license": "Apache-2.0",
+  "installSource": "npm",
+  "installCommand": "@anthropic/playwright-mcp-server",
+  "transportType": "stdio",
+  "permissions": [
+    { "type": "execute", "scope": "browser", "description": "Control browser automation", "required": true, "warning": "Can access websites and execute JavaScript" }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": true },
+    "resources": { "listChanged": true }
+  },
+  "tools": [
+    { "name": "navigate", "description": "Navigate to a URL" },
+    { "name": "screenshot", "description": "Take a screenshot", "isReadOnly": true },
+    { "name": "click", "description": "Click an element" },
+    { "name": "fill", "description": "Fill an input field" },
+    { "name": "evaluate", "description": "Execute JavaScript in page context" }
+  ],
+  "resources": [],
+  "prompts": [],
+  "requiredEnvVars": [],
+  "optionalEnvVars": [
+    { "name": "PLAYWRIGHT_HEADLESS", "description": "Run in headless mode", "defaultValue": "true" }
+  ],
+  "minProtocolVersion": "2024-11-05",
+  "downloads": 52000,
+  "rating": 4.7,
+  "ratingCount": 167,
+  "reviews": [],
+  "lastUpdated": "2024-11-15T10:00:00Z",
+  "createdAt": "2024-10-01T00:00:00Z",
+  "isVerified": true,
+  "isFeatured": true
+}
